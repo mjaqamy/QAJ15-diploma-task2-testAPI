@@ -15,11 +15,14 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "format": "npx prettier --write ."
+        "format": "npx prettier --write .",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
         "eslint": "^10.4.0",
+        "eslint-plugin-prettier": "^5.5.5",
         "globals": "^17.6.0",
         "prettier": "^3.8.3",
         "typescript-eslint": "^8.59.4"
