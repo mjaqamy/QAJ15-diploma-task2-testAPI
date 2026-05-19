@@ -1,0 +1,20 @@
+{
+  "name": "qaj15-diploma-task2-testapi",
+  "version": "1.0.0",
+  "description": "API testing",
+  "homepage": "https://github.com/mjaqamy/QAJ15-diploma-task2-testAPI#readme",
+  "bugs": {
+    "url": "https://github.com/mjaqamy/QAJ15-diploma-task2-testAPI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjaqamy/QAJ15-diploma-task2-testAPI.git"
+  },
+  "license": "ISC",
+  "author": "Yuliya Manko",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
