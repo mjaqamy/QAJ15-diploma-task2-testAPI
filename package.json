@@ -17,12 +17,15 @@
     "scripts": {
         "format": "npx prettier --write .",
         "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
+        "lint:fix": "eslint . --fix",
+        "jest": "npx jest --config ./jest/config_jest/jest.config.js"
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
+        "@types/dotenv": "^6.1.1",
         "@types/jest": "^30.0.0",
-        "@types/superagent": "^8.1.9",
+        "@types/superagent": "^8.1.10",
+        "dotenv": "^17.4.2",
         "eslint": "^10.4.0",
         "eslint-plugin-prettier": "^5.5.5",
         "globals": "^17.6.0",
