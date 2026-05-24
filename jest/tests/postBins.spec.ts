@@ -66,6 +66,7 @@ describe("Тест API JSONBin (jest)", () => {
         test("5. GET - Негативный: проверка статуса 400 при неверном формате id", async () => {
             const res = await binsClient.getObjectById("invalid-format-id");
             expect(res.status).toBe(400);
+            expect(res.body.message).toBe("Invalid Bin Id provided");
         });
     });
 
@@ -95,9 +96,10 @@ describe("Тест API JSONBin (jest)", () => {
             expect(res.status).toBe(404);
         });
 
-        test("5. PUT - Негативный: обновление с неверным форматом id возвращает 404", async () => {
+        test("5. PUT - Негативный: обновление с неверным форматом id возвращает 400", async () => {
             const res = await binsClient.putObject("bad-id-format", updatedObject);
             expect(res.status).toBe(400);
+            expect(res.body.message).toBe("Invalid Bin Id provided");
         });
     });
 
@@ -127,9 +129,10 @@ describe("Тест API JSONBin (jest)", () => {
             expect(res.status).toBe(404);
         });
 
-        test("5. DELETE - Негативный: удаление с неверным форматом id возвращает 404", async () => {
+        test("5. DELETE - Негативный: удаление с неверным форматом id возвращает 400", async () => {
             const res = await binsClient.deleteObject("wrong-id-format");
             expect(res.status).toBe(400);
+            expect(res.body.message).toBe("Invalid Bin Id provided");
         });
     });
 });
